@@ -2,12 +2,14 @@
 
    namespace Sonify_POO;
 
-   class Music
+   public class Music
    {
       public string Name { get; set; }
-      public string Artist { get; set; }
+      public string Artist { get;}
       public int Duration { get; set; }
-      public bool Available { get; set; } // Leitura e escrita - Propriedade
+      public bool Available { get;} // Leitura e escrita - Propriedade
+
+      public string Description => $"A Música: {Name} - Pertence a Banda {Artist} - Com a duração de {Duration} Minutos"; // Leitura (Get) - Propriedade, usando lambda function
 
       public void Play()
       {
@@ -21,4 +23,4 @@
             Console.WriteLine("Música indisponível.");
          }
       }
-   }
+   } 
