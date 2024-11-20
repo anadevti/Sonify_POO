@@ -4,8 +4,13 @@
 public class Album
 {
     private List<Music> Musics = new List<Music>();
+
+    public Album(string name)
+    {
+        Name = name;
+    }
     
-    public string Name { get; set; }
+    public string Name { get;}
     
     
     public int Total_Duration => Musics.Sum(m => m.Duration);

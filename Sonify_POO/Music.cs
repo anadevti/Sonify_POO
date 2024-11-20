@@ -2,31 +2,32 @@
 
    namespace Sonify_POO;
    
-   public class Music
+   public class Music // construtor
    {
       
-      public Music(Band artist)
+      public Music(Band artist, string name)
       {
          Artist = artist;
+         Name = name;
       }
       
-      public string Name { get; set; }
+      public string Name { get;}
       public Band Artist { get;}
       public int Duration { get; set; }
-      public bool Available { get;} // Leitura e escrita - Propriedade
+      public bool Available { get; set; } // Leitura e escrita - Propriedade
 
       public string Description => $"A Música: {Name} - Pertence a Banda {Artist} - Com a duração de {Duration} Minutos"; // Leitura (Get) - Propriedade, usando lambda function
 
-      public void Play()
+      public void Play_Tech()
       {
-         Console.WriteLine($"Nome: {Name} - Artista: {Artist} - Duração: {Duration} - Disponível: {Available}");
+         Console.WriteLine($"A música: {Name} Do Artista: {Artist.Name} Com a Duração de: {Duration} segundos está:");
          if (Available)
          {
             Console.WriteLine("Disponivel para reprodução.");
          }
          else
          {
-            Console.WriteLine("Música indisponível.");
+            Console.WriteLine("Indisponível para reprodução.");
          }
       }
    } 
