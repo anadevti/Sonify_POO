@@ -1,11 +1,17 @@
 ﻿   using System.Collections.Concurrent;
 
    namespace Sonify_POO;
-
+   
    public class Music
    {
+      
+      public Music(Band artist)
+      {
+         Artist = artist;
+      }
+      
       public string Name { get; set; }
-      public string Artist { get;}
+      public Band Artist { get;}
       public int Duration { get; set; }
       public bool Available { get;} // Leitura e escrita - Propriedade
 
